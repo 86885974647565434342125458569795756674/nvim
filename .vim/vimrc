@@ -1,0 +1,59 @@
+syntax on
+set number
+set cursorline
+set nowrap "don't multiline long line
+set showcmd "default, show unfinish cmd 
+set wildmenu "complete cmd
+set hlsearch "noh to turn off once, n N 
+set incsearch
+set ignorecase
+set smartcase
+"multiwindows ctrl w s or v
+"v V can into normal
+"ctrl v add(I or A) in one col esc, auto add all
+
+set nocompatible
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+set mouse=a
+set encoding=utf-8
+let &t_ut=''
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set scrolloff=5
+set tw=0
+set indentexpr=
+set backspace=indent,eol,start
+set foldmethod=indent
+set foldlevel=99
+set laststatus=2
+set autochdir
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+"have no right to w, w !sudo tee %
+
+
+
+let mapleader=" "
+
+map <LEADER><up> :res +5<CR>
+map <LEADER><down> :res -5<CR>
+map <LEADER><left> :vertical resize-5<CR>
+map <LEADER><right> :vertical resize+5<CR>
+
+
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+
+call plug#end()

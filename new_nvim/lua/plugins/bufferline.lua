@@ -1,5 +1,6 @@
 local bufferline = require('bufferline')
 vim.opt.termguicolors = true
+vim.api.nvim_set_keymap("n", "gb", "<Cmd>BufferLinePick<CR>", { noremap = true, silent = true })
 return bufferline.setup {
     options = {
         --mode = "buffers", -- set to "tabs" to only show tabpages instead

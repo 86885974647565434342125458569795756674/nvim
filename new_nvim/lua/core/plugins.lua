@@ -19,5 +19,6 @@ return require("lazy").setup({
   {"nvim-lua/plenary.nvim"},
   {"jiangmiao/auto-pairs"},
   {"akinsho/bufferline.nvim",version="*",dependencies="nvim-tree/nvim-web-devicons"},
+  {"scrooloose/nerdcommenter"},
 
 })

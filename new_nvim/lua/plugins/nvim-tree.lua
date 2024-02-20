@@ -25,4 +25,3 @@ require("nvim-tree").setup({
   },
 })
 
-vim.keymap.set("n", "tt", ":NvimTreeToggle<cr>", { noremap = true, silent = true })

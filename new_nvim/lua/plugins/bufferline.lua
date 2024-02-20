@@ -1,12 +1,12 @@
 local bufferline = require('bufferline')
 vim.opt.termguicolors = true
-vim.api.nvim_set_keymap("n", "gb", "<Cmd>BufferLinePick<CR>", { noremap = true, silent = true })
+--vim.api.nvim_set_keymap("n", "gb", "<Cmd>BufferLinePick<CR>", { noremap = true, silent = true })
 bufferline.setup {
     options = {
         --mode = "buffers", -- set to "tabs" to only show tabpages instead
         --style_preset = bufferline.style_preset.default, -- or bufferline.style_preset.minimal,
         --themable = true | false, -- allows highlight groups to be overriden i.e. sets highlights as default
-        numbers = "none" --| "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+        numbers = "none", --| "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
         --close_command = "bdelete! %d",       -- can be a string | function, | false see "Mouse actions"
         --right_mouse_command = "bdelete! %d", -- can be a string | function | false, see "Mouse actions"
         --left_mouse_command = "buffer %d",    -- can be a string | function, | false see "Mouse actions"
@@ -35,7 +35,7 @@ bufferline.setup {
         max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
         --truncate_names = true, -- whether or not tab names should be truncated
         tab_size = 18,
-        diagnostics = "nvim_lsp"--false | "nvim_lsp" | "coc",
+        diagnostics = "nvim_lsp",--false | "nvim_lsp" | "coc",
         --diagnostics_update_in_insert = false,
         -- The diagnostics indicator can be set to nil to keep the buffer name highlight but delete the highlighting
         --diagnostics_indicator = function(count, level, diagnostics_dict, context)
@@ -64,8 +64,8 @@ bufferline.setup {
         offsets = {
             {
                 filetype = "NvimTree",
-                text = "File Explorer" | function ,
-                text_align = "center"--"left" | "center" | "right"
+                text = "File Explorer",-- | function ,
+                text_align = "center",--"left" | "center" | "right"
                 --separator = true
             }
         },

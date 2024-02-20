@@ -20,5 +20,6 @@ return require("lazy").setup({
   {"jiangmiao/auto-pairs"},
   {"akinsho/bufferline.nvim",version="*",dependencies="nvim-tree/nvim-web-devicons"},
   {"scrooloose/nerdcommenter"},
-  { "ethanholz/nvim-lastplace" },
+  {"ethanholz/nvim-lastplace"},
+  {"nvim-tree/nvim-tree.lua"},
 })

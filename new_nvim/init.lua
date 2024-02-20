@@ -1,3 +1,5 @@
+require("core.keymaps")
 require("core.plugins")
 require("plugins.bufferline")
 require("plugins.lastplace")
+require("plugins.nvim-tree")

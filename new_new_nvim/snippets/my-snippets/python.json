@@ -1,0 +1,11 @@
+{
+    "cyy comment": {
+        "prefix": "cyy",
+        "body": [
+		"#cyy  ${1:comment}",
+		"",
+		"${0:start code}"
+	],
+        "description": "cyy comment"
+    }
+}
